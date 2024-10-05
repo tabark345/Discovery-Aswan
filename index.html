@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Aswan - Egypt's Timeless Treasure</title>
+    <meta name="description" content="Explore the wonders of Aswan, Egypt. Plan your perfect trip with our comprehensive guide to attractions, accommodations, and experiences.">
+    <link rel="shortcut icon" href="aswan1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#home" class="logo">
+                    <img src="/aswan1.jpg" alt="Aswan Logo" width="50" height="50">
+                    <span>Discover Aswan</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#accommodations">Stay</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Welcome to Aswan</h1>
+                    <p>Where Ancient Wonders Meet Nubian Charm</p>
+                    <a href="#about" class="btn btn-primary">Explore Aswan</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Discover Aswan</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Aswan, a jewel along the Nile, offers a unique blend of ancient Egyptian grandeur and Nubian culture. With its sun-soaked islands, majestic temples, and colorful markets, Aswan invites you to step back in time while enjoying modern comforts.</p>
+                        <ul class="highlights">
+                            <li><i class="fas fa-sun"></i> 300+ days of sunshine</li>
+                            <li><i class="fas fa-landmark"></i> UNESCO World Heritage sites</li>
+                            <li><i class="fas fa-ship"></i> Scenic Nile cruises</li>
+                            <li><i class="fas fa-users"></i> Rich Nubian heritage</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="/aswan1.jpg" alt="Aswan Landscape" width="600" height="400" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="attractions" class="attractions">
+            <div class="container">
+                <h2>Top Attractions</h2>
+                <div class="attraction-grid">
+                    <article class="card attraction-card">
+                        <img src="/as.jpg" alt="Abu Simbel Temple" width="800" height="600" loading="lazy">
+                        <div class="card-content">
+                            <h3>Abu Simbel Temple</h3>
+                            <p>Marvel at the colossal statues of Ramesses II at this iconic temple complex.</p>
+                            <a href="https://en.wikipedia.org/wiki/Abu_Simbel" class="btn btn-secondary" target="_blank">Learn More</a>
+                        </div>
+                    </article>
+                    <article class="card attraction-card">
+                        <img src="/aswan temple.webp" alt="Philae Temple" width="800" height="600" loading="lazy">
+                        <div class="card-content">
+                            <h3>Philae Temple</h3>
+                            <p>Explore the beautiful island temple dedicated to the goddess Isis.</p>
+                            <a href="https://en.wikipedia.org/wiki/Philae_temple_complex" class="btn btn-secondary" target="_blank">Learn More</a>
+                        </div>
+                    </article>
+                    <article class="card attraction-card">
+                        <img src="/aswan dam.webp" alt="Aswan High Dam" width="800" height="600" loading="lazy">
+                        <div class="card-content">
+                            <h3>Aswan High Dam</h3>
+                            <p>Witness this engineering marvel that tamed the Nile and created Lake Nasser.</p>
+                            <a href="https://en.wikipedia.org/wiki/Aswan_Dam" class="btn btn-secondary" target="_blank">Learn More</a>
+                        </div>
+                    </article>
+                    <article class="card attraction-card">
+                        <img src="/el.jpg" alt="Elephantine Island" width="800" height="600" loading="lazy">
+                        <div class="card-content">
+                            <h3>Elephantine Island</h3>
+                            <p>Discover ancient ruins and lush gardens on this historic Nile island.</p>
+                            <a href="https://en.wikipedia.org/wiki/Elephantine" class="btn btn-secondary" target="_blank">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiences" class="experiences">
+            <div class="container">
+                <h2>Unforgettable Experiences</h2>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <i class="fas fa-ship"></i>
+                        <h3>Nile Cruises</h3>
+                        <p>Embark on a luxurious journey along the Nile, witnessing breathtaking landscapes and ancient wonders.</p>
+                    </div>
+                    <div class="experience-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Nubian Cuisine</h3>
+                        <p>Savor authentic Nubian dishes and experience the warm hospitality of local families.</p>
+                    </div>
+                    <div class="experience-card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Sunset at the Nile</h3>
+                        <p>Capture the magical moments as the sun sets over the Nile, painting the sky in vibrant hues.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="accommodations" class="accommodations">
+            <div class="container">
+                <h2>Where to Stay</h2>
+                <div class="accommodation-grid">
+                    <article class="card accommodation-card">
+                        <img src="/old catract.jfif" alt="Sofitel Legend Old Cataract" width="800" height="600" loading="lazy">
+                        <div class="card-content">
+                            <h3>Sofitel Legend Old Cataract</h3>
+                            <p>Luxury 5-star hotel with stunning Nile views and rich history.</p>
+                            <div class="rating" aria-label="5 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="https://www.booking.com/hotel/eg/sohitel-legend-old-cataract.ar.html?aid=356980&label=gog235jc-1DCAsoQ0Ibc29oaXRlbC1sZWdlbmQtb2xkLWNhdGFyYWN0SDNYA2hDiAEBmAEBuAEXyAEM2AED6AEBiAIBqAIDuAL914a4BsACAdICJDViNDJjMmM0LTVlM2EtNDEwOS1iZDI2LTk5Y2Y5MTNjMTU0NNgCBOACAQ&sid=63ad0dcb25eef4cc818c3a5cd6b18aed&dist=0&keep_landing=1&sb_price_type=total&type=total&" class="btn btn-secondary" target="_blank">Book Now</a>
+                        </div>
+                    </article>
+                    <article class="card accommodation-card">
+                        <img src="/movenpick-resort-aswan.jpg" alt="Mövenpick Resort Aswan" width="800" height="600" loading="lazy">
+                        <div class="card-content">
+                            <h3>Mövenpick Resort Aswan</h3>
+                            <p>Modern resort on Elephantine Island with excellent amenities.</p>
+                            <div class="rating" aria-label="4 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <a href="https://www.booking.com/hotel/eg/movenpick-resort-aswan.ar.html?aid=356980&label=gog235jc-1DCAsoQ0IWbW92ZW5waWNrLXJlc29ydC1hc3dhbkgzWANoQ4gBAZgBAbgBGMgBDNgBA-gBAYgCAagCBLgCoteGuAbAAgHSAiRmZWI3NWU2ZC1iNzI2LTQwNzMtYTM2Ny0yODVhYzE0ZGYxMmTYAgTgAgE&sid=63ad0dcb25eef4cc818c3a5cd6b18aed&dist=0&keep_landing=1&sb_price_type=total&type=total&" class="btn btn-secondary" target="-blank">Book Now</a>
+                        </div>
+                    </article>
+                    <article class="card accommodation-card">
+                        <img src="/nv1.jpg" alt="Nubian Guesthouse" width="800" height="600" loading="lazy">
+                        <div class="card-content">
+                            <h3>Nubian Guesthouse</h3>
+                            <p>Authentic Nubian-style accommodation with warm hospitality.</p>
+                            <div class="rating" aria-label="3.5 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <a href="https://www.booking.com/hotel/eg/kafana-guest-house-nile-view.ar.html?aid=2077495&label=eg-aswan-IXetvgmHCuo0M3rxtJ6veAS630524232467%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-301703494958%3Alp21475%3Ali%3Adec%3Adm&sid=63ad0dcb25eef4cc818c3a5cd6b18aed&dest_id=-291535;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=4;hpos=4;nflt=sth%3D23;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=bayesian_review_score;srepoch=1728163111;srpvid=35c9958afd930438;type=total;ucfs=1&" class="btn btn-secondary" target="_blank">Book Now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="/as.jpg" alt="Aswan Temple" width="400" height="300" loading="lazy">
+                    <img src="/Aswan.jpg" alt="Nile River" width="400" height="300" loading="lazy">
+                    <img src="/nv1.jpg" alt="Nubian Village" width="400" height="300" loading="lazy">
+                    <img src="/axp-photography-1Uc6mC7X93c-unsplash.jpg" alt="Egyptian Market" width="400" height="300" loading="lazy">
+                    <img src="/lansh.jpg" alt="Felucca Boat" width="400" height="300" loading="lazy">
+                    <img src="/nv2.jpg" alt="Aswan Sunset" width="400" height="300" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="map">
+            <div class="container">
+                <h2>Explore Aswan</h2>
+                <div id="map-container"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <form class="contact-form" action="#" method="POST">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Nile Street, Aswan, Egypt</p>
+                        <p><i class="fas fa-phone"></i> +20 1127958268</p>
+                        <p><i class="fas fa-envelope"></i> tabarkabdlrhman@gmail.com</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Discover Aswan</h3>
+                    <p>Your gateway to exploring the wonders of Egypt's southern gem. We're dedicated to providing unforgettable experiences in Aswan.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#attractions">Attractions</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#accommodations">Stay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="newsletter-form" action="#" method="POST">
+                        <label for="newsletter-email" class="sr-only">Email</label>
+                        <input type="email" id="newsletter-email" name="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Discover Aswan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
